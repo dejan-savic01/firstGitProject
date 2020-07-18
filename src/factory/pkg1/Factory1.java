@@ -16,21 +16,39 @@ public class Factory1 {
      */
     public static void main(String[] args) {
         System.out.println("Početak");
+            
+        Car audi8 = new Car();
+        audi8.printAttributes();
         
-        int x=5;
-        Car auto1 = new Car();
-        auto1.model = "Audi";
-        auto1.buildYear = 2003;
-        auto1.ccm = 2000;
+        audi8.setModel("Audi broj 8");
+        audi8.setBuildYear(2003) ;
+        audi8.setCcm (2000);
+        audi8.setColor("green");
         
-        System.out.println("Model automobila 1 je:" + auto1.model );
+        //Car audi9 = new Car ( "Audi9", 2020, 3000, "silver");
+        
+        audi8.printAttributes();
         
         
-        int y = 29;
-        Car auto2 = new Car();
-        auto2.model = "Fiat";
-        auto2.buildYear= 2004;
-        System.out.println("Model automobila 2 je:" + auto2.model );
-    }
+        Car fiatPunto = new Car();
+        fiatPunto.setModel("Fiat");
+        fiatPunto.setBuildYear(2019);
+        
+        fiatPunto.printAttributes();
+        
+        Car lada = new Car ("Lada NIva", 1990, "green", 120, 50);
+        lada.printAttributes();
+        
+        Car opel= new Car("Opel", 2003, "blue", 200, 1300, 7, 150000);
+        opel.printAttributes();
+        opel.goToTravel(200);
+        opel.printAttributes();
+        opel.goToTravel(400);
+        opel.printAttributes();
     
+        
+        }
+
+    public Factory1() {
+    }
 }
